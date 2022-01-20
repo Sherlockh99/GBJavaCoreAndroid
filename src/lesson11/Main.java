@@ -1,5 +1,10 @@
 package lesson11;
 
+import lesson11.fruits.Apple;
+import lesson11.fruits.Box;
+import lesson11.fruits.Fruit;
+import lesson11.fruits.Orange;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -16,6 +21,14 @@ public class Main {
         for (int i = 0; i < arrayList.size(); i++) {
             System.out.print(arrayList.get(i)+ " ");
         }
+
+        /*
+        ArrayList<Fruit> fruits = new ArrayList<>();
+        fruits.add(new Apple(3));
+        Box boxApples1 = new Box<Apple>(fruits.get(0), 50);
+        Box boxOrange1 = new Box<Orange>(30);
+*/
+
     }
 
     public static void swapArray(Object[] o, int index1, int index2){
