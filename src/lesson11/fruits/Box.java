@@ -4,11 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Box<Fruit> {
+public class Box<T> {
 
     Fruit fruit;
-    //TId id;
-    //int weight;
     int countFruits;
 
     public Box(Fruit fruit, int countFruits) {
@@ -16,10 +14,20 @@ public class Box<Fruit> {
         this.countFruits = countFruits;
     }
 
-    //private ArrayList<Fruit> fruits = new ArrayList<>();
+    public double getWeight() {
+        return fruit.getWeight()*countFruits;
+    }
 
-    public int getWeight() {
-        //return countFruits * fruit.getWidht();
-        return 0;
+    public boolean compare(Box box){
+        return fruit.getWeight()*countFruits == box.getWeight();
+    }
+
+    public <T> void intersperse(Box<T> toBox){
+        toBox.addCountFruits(countFruits);
+        countFruits = 0;
+    }
+
+    public void addCountFruits(int countFruits) {
+        this.countFruits = this.countFruits + countFruits;
     }
 }

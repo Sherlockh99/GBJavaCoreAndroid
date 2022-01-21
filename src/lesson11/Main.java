@@ -12,6 +12,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        /*
         Integer[] aa = {5,8,9,10};
         swapArray(aa,3,2);
         System.out.println(Arrays.toString(aa));
@@ -21,13 +22,23 @@ public class Main {
         for (int i = 0; i < arrayList.size(); i++) {
             System.out.print(arrayList.get(i)+ " ");
         }
-
-        /*
-        ArrayList<Fruit> fruits = new ArrayList<>();
-        fruits.add(new Apple(3));
-        Box boxApples1 = new Box<Apple>(fruits.get(0), 50);
-        Box boxOrange1 = new Box<Orange>(30);
+        System.out.println();
 */
+
+        ArrayList<Fruit> fruits = new ArrayList<>();
+        fruits.add(new Apple(2));
+        fruits.add(new Orange());
+
+        Box boxApples1 = new Box(fruits.get(0), 6);
+        Box boxOrange1 = new Box(fruits.get(1),8);
+
+        System.out.println(boxOrange1.getWeight());
+        System.out.println(boxApples1.getWeight());
+        System.out.println(boxOrange1.compare(boxApples1));
+
+        boxApples1.intersperse(boxOrange1);
+        System.out.println(boxOrange1.getWeight());
+        System.out.println(boxApples1.getWeight());
 
     }
 

@@ -1,9 +1,9 @@
 package lesson11.fruits;
 
 public class Fruit {
-    protected int weight;
+    protected double weight;
 
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 
