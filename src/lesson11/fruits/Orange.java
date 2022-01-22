@@ -1,11 +1,12 @@
 package lesson11.fruits;
 
 public class Orange extends Fruit{
-    public Orange(double weight) {
+    public Orange(int countFruits, double weight) {
+        this.countFruits = countFruits;
         this.weight = weight;
     }
 
-    public Orange() {
-        this.weight = 1.5;
+    public Orange(int countFruits) {
+        this(countFruits,1.5);
     }
 }

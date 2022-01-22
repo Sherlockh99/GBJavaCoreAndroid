@@ -6,28 +6,50 @@ import java.util.List;
 
 public class Box<T> {
 
-    Fruit fruit;
-    int countFruits;
+    private ArrayList<T> fruits;
 
+    //private Fruit fruit;
+    //private int countFruits;
+    /*
     public Box(Fruit fruit, int countFruits) {
         this.fruit = fruit;
         this.countFruits = countFruits;
     }
+    */
+
+    public Box(ArrayList<T> fruits){
+        this.fruits = fruits;
+    }
+
+    public Box(T fruit){
+        fruits = new ArrayList<>();
+        fruits.add(fruit);
+    }
 
     public double getWeight() {
-        return fruit.getWeight()*countFruits;
+        double weight = 0;
+        for (int i = 0; i < fruits.size(); i++) {
+            weight+=((Fruit) fruits.get(i)).getWeight()*((Fruit) fruits.get(i)).getCountFruits();
+        }
+        return weight;
     }
 
     public boolean compare(Box box){
-        return fruit.getWeight()*countFruits == box.getWeight();
+        return getWeight() == box.getWeight();
     }
 
-    public <T> void intersperse(Box<T> toBox){
-        toBox.addCountFruits(countFruits);
-        countFruits = 0;
+    public void addFruit(Box<T> fromBox){
+        addFruit(fromBox.fruits);
+        fromBox.fruits.clear();
     }
 
-    public void addCountFruits(int countFruits) {
-        this.countFruits = this.countFruits + countFruits;
+    public void addFruit(T fruit){
+        fruits.add(fruit);
     }
+
+    public void addFruit(ArrayList<T> fruits){
+        this.fruits.addAll(fruits);
+    }
+
+
 }
