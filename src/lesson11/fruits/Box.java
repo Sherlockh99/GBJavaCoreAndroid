@@ -8,15 +8,6 @@ public class Box<T> {
 
     private ArrayList<T> fruits;
 
-    //private Fruit fruit;
-    //private int countFruits;
-    /*
-    public Box(Fruit fruit, int countFruits) {
-        this.fruit = fruit;
-        this.countFruits = countFruits;
-    }
-    */
-
     public Box(ArrayList<T> fruits){
         this.fruits = fruits;
     }
@@ -50,6 +41,4 @@ public class Box<T> {
     public void addFruit(ArrayList<T> fruits){
         this.fruits.addAll(fruits);
     }
-
-
 }
