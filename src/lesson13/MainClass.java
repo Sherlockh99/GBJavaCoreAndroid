@@ -32,7 +32,6 @@ public class MainClass {
         cd1.await();
         cd2.countDown();
         System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка началась!!!");
-        //cyclicBarrier.await();
         cd3.await();
         System.out.println("Победитель: " + firstPlace.getName());
         System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка закончилась!!!");
