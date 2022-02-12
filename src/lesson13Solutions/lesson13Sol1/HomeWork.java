@@ -1,4 +1,4 @@
-package lesson13Sol;
+package lesson13Solutions.lesson13Sol1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
