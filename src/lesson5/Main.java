@@ -1,5 +1,12 @@
 package lesson5;
 
+/**
+ * 1. Create a class "Employee" with fields: full name, position, email, phone, salary, age.
+ * 2. The class constructor must fill in these fields when creating the object.
+ * 3. Inside the "Employee" class, write a method that displays information about the object to the console.
+ * 4. Create an array of 5 employees.
+ * 5. Using the loop, display information only about employees over 40 years old.
+ */
 public class Main {
     public static void main(String[] args) {
         Employee[] employees = new Employee[5];

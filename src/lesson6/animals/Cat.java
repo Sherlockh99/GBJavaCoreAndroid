@@ -18,6 +18,6 @@ public class Cat extends Animal {
 
     @Override
     public void swim(int distance) {
-        System.out.println("Коты еще не научились плавать");
+        System.out.println("Cats haven't learned to swim yet");
     }
 }

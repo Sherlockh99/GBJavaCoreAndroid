@@ -19,9 +19,9 @@ public class Dog extends Animal{
     @Override
     public void swim(int distance) {
         if (distance>Dog.limitationSwim){
-            System.out.println("У собак ограничение по плаванию: " + limitationSwim + " метров");
+            System.out.println("Dogs have a swimming limit of " + limitationSwim + " 5 meters.");
         }else {
-            System.out.println(name + " проплыл " + distance + " метров");
+            System.out.println(name + " swam " + distance + " meters.");
         }
     }
 }

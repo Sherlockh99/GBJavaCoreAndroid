@@ -1,5 +1,23 @@
 package lesson1;
 
+/**
+ * 1. Write a method that takes two integers to the input and checks that their amount lies in the range
+ * from 10 to 20 (inclusive), if yes, return True, otherwise - false.
+ *
+ * 2. Write a method that is transmitted as a parameter as an integer,
+ * the method should be printed in the console whether the number was transmitted or negative.
+ Note: zero is considered a positive number.
+ *
+ * 3. Write a method to which an integer is transmitted as a parameter.
+ * The method should return True if the number is negative, and return the FALSE if positive.
+ *
+ * 4. Write a method to which the line and number are transmitted as arguments,
+ * the method must print the indicated number indicated number of times to the console;
+ *
+ * 5. * Write a method that determines whether the year is a leap year,
+ * and returns Boolean (leaps -bosom - true, not a leap - false).
+ * Every 4th year is a leap, except for every 100th, while every 400 is a leap.
+ */
 public class Lesson1 {
 
     public static void main(String[] args) {
@@ -8,7 +26,7 @@ public class Lesson1 {
             float rez = calculate(2, 3, 4, 5);
             System.out.println(rez);
         }catch (ArithmeticException e){
-            System.out.println("Ошибка при вычислении выражения");
+            System.out.println("Error evaluating expression");
         }
 
         System.out.println();
@@ -73,9 +91,9 @@ public class Lesson1 {
 
     public static void isPositiveOrNegative(int n1){
         if (n1<0){
-            System.out.printf("Число %s является отрицательным \n",n1);
+            System.out.printf("The number %s a positive number \n",n1);
         }else {
-            System.out.printf("Число %s является положительным \n",n1);
+            System.out.printf("The number %s a negative number \n",n1);
         }
     }
 
@@ -84,14 +102,14 @@ public class Lesson1 {
     }
 
     public static void hello(String name){
-        System.out.printf("Привет, %s!\n",name);
+        System.out.printf("Hello, %s!\n",name);
     }
 
     public static void leapYear(int year){
         if((year%4!=0) || (year%100==0 && year%400!=0)){
-            System.out.printf("Год %d невысокосный \n",year);
+            System.out.printf("Year %d is lap \n",year);
         }else{
-            System.out.printf("Год %d высокосный \n",year);
+            System.out.printf("Year %d not lap \n",year);
         }
     }
 }

@@ -12,12 +12,11 @@ public abstract class Animal {
 
     public void run(int distance){
         if(distance>limitation){
-            System.out.println(name + " не пробежит такую дистанцию. Ограничение: " + limitation + " метров.");
+            System.out.println(name + " will not run such a distance. Restriction: " + limitation + " meters.");
         }else {
-            System.out.println(name + " пробежал " + distance + " метров.");
+            System.out.println(name + " ran " + distance + " meters.");
         }
     }
-
 
     public abstract void swim(int distance);
 }

@@ -6,7 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class GuessNumber extends JFrame {
-
     private int randomNumber;
     private static final int NUMBERATTEMPTS = 3;
     private JTextField textField;
@@ -25,7 +24,7 @@ public class GuessNumber extends JFrame {
         for (int i = 1; i <= 10; i++) {
             jButtons[i-1].setBackground(Color.LIGHT_GRAY);
         }
-        textField.setText("Программа загадала число от 1 до 10");
+        textField.setText("The program guessed a number from 1 to 10");
         attempts = 0;
     }
 
@@ -42,7 +41,7 @@ public class GuessNumber extends JFrame {
         textField = new JTextField();
         add(textField, BorderLayout.NORTH);
 
-        textField.setText("Программа загадала число от 1 до 10");
+        textField.setText("The program guessed a number from 1 to 10");
 
         textField.setEditable(false);
         textField.setHorizontalAlignment(SwingConstants.CENTER);
@@ -87,18 +86,18 @@ public class GuessNumber extends JFrame {
         }
         attempts++;
         if(answer == randomNumber) {
-            textField.setText("Вы угадали! Ответ: " + randomNumber + ". Число попыток: " + attempts);
+            textField.setText("You win! Answer: " + randomNumber + ". Number of attempts: " + attempts);
             button.setBackground(Color.GREEN);
             end = true;
         } else {
             if(answer > randomNumber) {
-                textField.setText("Не угадали! Загаданное число меньше");
+                textField.setText("Didn't guess! The hidden number is less");
             } else {
-                textField.setText("Не угадали! Загаданное число больше");
+                textField.setText("Didn't guess! The hidden number is greater");
             }
             button.setBackground(Color.RED);
             if (attempts==NUMBERATTEMPTS){
-                textField.setText("Не угадали! Загаданное число: " + randomNumber + ". Игра окончена.");
+                textField.setText("Didn't guess! Hidden number: " + randomNumber + ". Game over!");
                 end = true;
             }
         }

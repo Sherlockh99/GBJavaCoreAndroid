@@ -3,6 +3,10 @@ package lesson4;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * Игра Крестики-нолики / Game Tic-tac-toe
+ *
+ */
 public class Main {
     private static final int SIZE_MAP = 3;
     private static final char MAP_EMPTY = '_';
@@ -20,25 +24,25 @@ public class Main {
             turnHuman();
             res = checkWin(MAP_X);
             if(res){
-                System.out.println("Победил игрок!");
+                System.out.println("Player won!");
                 printMap();
                 break;
             }
             //printMap();
             if(isMapFull()){
-                System.out.println("Ничья!");
+                System.out.println("Draw!");
                 break;
             };
 
             turnComputer();
             res = checkWin(MAP_0);
             if(res){
-                System.out.println("Победил компьютер!");
+                System.out.println("Computer won!");
                 printMap();
                 break;
             }
             if(isMapFull()){
-                System.out.println("Ничья!");
+                System.out.println("Draw!");
                 break;
             };
         }
@@ -100,9 +104,9 @@ public class Main {
     public static void turnHuman(){
         int x,y;
         do{
-            System.out.print("Введите координаты x: ");
+            System.out.print("Enter X coordinate: ");
             x = scanner.nextInt() - 1;
-            System.out.print("Введите координаты y: ");
+            System.out.print("Enter Y coordinate: ");
             y = scanner.nextInt() - 1;
         } while (!isCoordinatValid(x,y));
         map[x][y] = MAP_X;
@@ -148,5 +152,4 @@ public class Main {
             } System.out.println();
         } System.out.println();
     }
-
 }
